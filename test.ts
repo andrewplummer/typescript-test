@@ -30,13 +30,13 @@ pkg.core_method();
 pkg.foo();
 pkg.foo.method();
 
-import * as pkg_sub from 'pkg/foo_module';
+import * as root from 'pkg/foo';
 
-pkg_sub();
-pkg_sub.core_method();
-pkg_sub.foo();
-pkg_sub.foo.method();
+root();
+root.core_method();
+root.foo();
+root.foo.method();
 
-import * as foo_method from 'pkg/foo/method';
+import method = require('pkg/foo/method');
 
-foo_method();
+method();
